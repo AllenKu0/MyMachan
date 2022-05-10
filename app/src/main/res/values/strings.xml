@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MyMachan</string>
+
+    <string name="hint_confirm">確定</string>
+    <string name="hint_cancel">取消</string>
+
+    <string name="api_request_person">/api/PersonV/%1$s</string>
+    <string name="api_request_org">/api/OrgV</string>
+    <!--link-->
+    <string name="link_erp_api_url">http://60.249.57.53/WebService/</string>
+    <string name="link_machan_api_url">http://60.249.57.53:15004/</string>
+    <string name="link_machan_image_url">http://10.1.5.30:3000/</string>
+
+
+    <string name="error_code_network">失敗，請重試或檢查網路狀態</string>
+
+    <string name="hint_loading">載入中，請稍候</string>
+    <string name="hint_login">登入中，請稍候</string>
+    <string name="hint_printing">列印中，請稍候</string>
+    <string name="hint_uploading">上傳中，請稍候</string>
+
+
+    <string name="receive_good_supplier_item">%1$s %2$s</string>
+
+    <string name="api_request_supplier">/api/SupplierV/</string>
+    <string name="api_request_supplier_with_condition">/api/SupplierV/?$filter=indexof(BizPartnerId,\'%1$s\') ne -1 or indexof(ShortName,\'%2$s\') ne -1</string>
+
+</resources>

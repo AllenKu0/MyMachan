@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Allen/AndroidStudioProjects/MyMachan/app/src/main/res/drawable/item_purchace.xml" value="0.265625" />
+        <entry key="..\:/Users/Allen/AndroidStudioProjects/MyMachan/app/src/main/res/layout/activity_login.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Allen/AndroidStudioProjects/MyMachan/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Allen/AndroidStudioProjects/MyMachan/app/src/main/res/layout/activity_purchase_receive_good_list.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Allen/AndroidStudioProjects/MyMachan/app/src/main/res/layout/item_purchase_receive_good.xml" value="0.264" />
+        <entry key="..\:/Users/Allen/AndroidStudioProjects/MyMachan/app/src/main/res/layout/item_purchase_receive_good_material.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
