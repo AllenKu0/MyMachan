@@ -6,16 +6,16 @@
     <data>
         <variable
             name="view"
-            type="com.example.mymachan.PurchaseReceiveGoodsContract.View" />
+            type="com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodsContract.View" />
         <variable
             name="receiveGoodSearch"
-            type="com.example.mymachan.PurchaseReceiveGoodSearch" />
+            type="com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodSearch" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".PurchaseReceiveActivity">
+        tools:context=".ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveActivity">
 
         <Button
             android:id="@+id/button3"
@@ -63,8 +63,10 @@
                     android:text="@={receiveGoodSearch.supplierName}"
                     app:layout_constraintBottom_toTopOf="@+id/guideline2"
                     app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/textView"
-                    app:layout_constraintTop_toTopOf="@+id/guideline7" />
+                    app:layout_constraintTop_toTopOf="@+id/guideline7"
+                    app:layout_constraintVertical_bias="0.51" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline9"
@@ -111,8 +113,10 @@
                     android:text="@={receiveGoodSearch.supplierId}"
                     app:layout_constraintBottom_toTopOf="@+id/guideline2"
                     app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/guideline9"
-                    app:layout_constraintTop_toTopOf="@+id/guideline7" />
+                    app:layout_constraintTop_toTopOf="@+id/guideline7"
+                    app:layout_constraintVertical_bias="1.0" />
 
                 <Button
                     android:id="@+id/button"

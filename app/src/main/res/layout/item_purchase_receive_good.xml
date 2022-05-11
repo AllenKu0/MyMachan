@@ -5,10 +5,10 @@
     <data>
         <variable
             name="view"
-            type="com.example.mymachan.PurchaseReceiveGoodsContract.Adapter" />
+            type="com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodsContract.Adapter" />
         <variable
             name="data"
-            type="com.example.mymachan.PurchaseReceiveGoodSearch.ItemPurchaseNumber" />
+            type="com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodSearch.ItemPurchaseNumber" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

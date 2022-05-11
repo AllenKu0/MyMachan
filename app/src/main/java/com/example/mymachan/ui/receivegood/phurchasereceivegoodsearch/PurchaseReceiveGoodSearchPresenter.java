@@ -1,11 +1,14 @@
-package com.example.mymachan;
+package com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch;
 
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.example.mymachan.R;
 import com.example.mymachan.api.ErpAPI;
 import com.example.mymachan.api.MachanAPI;
+import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodSearch;
+import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodsContract;
 import com.example.mymachan.utils.api.pojo.getpurorderbybparid.GetPurOrderByBParIdResponse;
 import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodResponse;
 import com.example.mymachan.api.pojo.response.SupplierVResponse;

@@ -1,6 +1,6 @@
 package com.example.mymachan.Component;
 
-import com.example.mymachan.PurchaseReceiveActivity;
+import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveActivity;
 import com.example.mymachan.annotation.PurchaseReceiveGoodSearchScoped;
 import com.example.mymachan.module.PurchaseReceiveGoodSearchModel;
 

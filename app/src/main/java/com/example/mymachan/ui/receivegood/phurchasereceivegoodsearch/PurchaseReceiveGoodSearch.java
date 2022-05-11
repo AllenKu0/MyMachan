@@ -1,4 +1,4 @@
-package com.example.mymachan;
+package com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch;
 
 import java.io.Serializable;
 import java.util.ArrayList;

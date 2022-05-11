@@ -1,6 +1,5 @@
-package com.example.mymachan;
+package com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -9,10 +8,13 @@ import android.content.Intent;
 import android.os.Bundle;
 
 
+import com.example.mymachan.Application;
 import com.example.mymachan.Component.DaggerPurchaseReceiveGoodSearchComponent;
 import com.example.mymachan.Component.PurchaseReceiveGoodSearchComponent;
+import com.example.mymachan.R;
 import com.example.mymachan.base.BaseActivity;
 import com.example.mymachan.databinding.ActivityMainBinding;
+import com.example.mymachan.ui.receivegood.phurchasereceivegoodlist.PurchaseReceiveGoodListActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +58,7 @@ public class PurchaseReceiveActivity extends BaseActivity implements PurchaseRec
                                         .applicationComponent(((Application)getApplication()).getApplicationComponent())
                                         .build();
         purchaseReceiveGoodSearchComponent.inject(this);
-        activityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.setReceiveGoodSearch(purchaseReceiveGoodSearch);
         activityMainBinding.setView(this);
 
@@ -118,7 +120,7 @@ public class PurchaseReceiveActivity extends BaseActivity implements PurchaseRec
             //而物料沒有條件限制
             //這裡傳的是整個大的PurchaseReceiveGoodSearch，包含採購和物料
             bundle.putSerializable(BUNDLE_PURCHASE_RECEIVE_GOOD_SEARCH,presenter.getNoneRepeatData(purchaseReceiveGoodSearch));
-            Intent intent = new Intent(PurchaseReceiveActivity.this,PurchaseReceiveGoodListActivity.class);
+            Intent intent = new Intent(PurchaseReceiveActivity.this, PurchaseReceiveGoodListActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
         }

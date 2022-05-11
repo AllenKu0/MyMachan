@@ -1,4 +1,4 @@
-package com.example.mymachan;
+package com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mymachan.databinding.ItemPurchaseReceiveGoodBinding;
+import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodSearch;
+import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodsContract;
 import com.example.mymachan.utils.ViewHolder;
 
 import java.util.List;

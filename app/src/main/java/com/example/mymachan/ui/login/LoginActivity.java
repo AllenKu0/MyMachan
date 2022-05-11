@@ -1,9 +1,7 @@
 package com.example.mymachan.ui.login;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +11,10 @@ import android.util.Log;
 import com.example.mymachan.Application;
 import com.example.mymachan.Component.DaggerLoginComponent;
 import com.example.mymachan.Component.LoginComponent;
-import com.example.mymachan.PurchaseReceiveActivity;
+import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveActivity;
 import com.example.mymachan.R;
 import com.example.mymachan.base.BaseActivity;
 import com.example.mymachan.databinding.ActivityLoginBinding;
-import com.example.mymachan.databinding.ActivityMainBinding;
 import com.example.mymachan.utils.sharepreference.LoginPreferencesProvider;
 
 import java.util.List;

@@ -1,9 +1,10 @@
-package com.example.mymachan;
+package com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch;
 
 import android.content.DialogInterface;
 
 import com.example.mymachan.base.BaseAttacher;
 import com.example.mymachan.base.BaseView;
+import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodSearch;
 
 import java.util.List;
 

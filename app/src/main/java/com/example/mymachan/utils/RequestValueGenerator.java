@@ -1,5 +1,6 @@
 package com.example.mymachan.utils;
 
+import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodDeliveryRequest;
 import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodRequest;
 
 public class RequestValueGenerator {
@@ -49,5 +50,17 @@ public class RequestValueGenerator {
             }
         }
         return request.toString();
+    }
+
+    public static  String getReceiveGoodDeliveryRequest(ReceiveGoodDeliveryRequest receiveGoodDelivery){
+
+        StringBuilder deliveryRequest =
+                new StringBuilder("A.BillNo = '" + receiveGoodDelivery.getBillNo() + "' and "+
+                        "A.OrgId = '" + receiveGoodDelivery.getOrgId()  + "' and " +
+                        "B.MaterialId = '" + receiveGoodDelivery.getMaterialId()  + "' and " +
+                        "A.BillDate = '"+ receiveGoodDelivery.getBillDate() + "' and "+
+                        "A.BillDate < " + CommonUtils.getYear() + "1231");
+        //A.BillNo=&apos;1MP1708160096&apos;and A.OrgId=&apos;1000&apos;and A.BillDate &gt;=20170816 and A.BillDate &lt;=20201231
+        return deliveryRequest.toString();
     }
 }

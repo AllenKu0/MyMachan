@@ -32,4 +32,5 @@ public interface BaseView {
 
     void showToast(@StringRes int text);
 
+
 }

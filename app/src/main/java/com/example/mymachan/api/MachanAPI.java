@@ -2,6 +2,7 @@ package com.example.mymachan.api;
 
 import com.example.mymachan.api.pojo.response.OrgVResponse;
 import com.example.mymachan.api.pojo.response.PersonVResponse;
+import com.example.mymachan.api.pojo.response.SSMasterV2Response;
 import com.example.mymachan.api.pojo.response.SupplierVResponse;
 
 import java.util.List;
@@ -116,8 +117,8 @@ public interface MachanAPI {
 //    @GET
 //    Observable<List<SSMasterVResponse>> getSSMasterV(@Url String mSSMasterV);
 //
-//    @GET
-//    Observable<List<SSMasterV2Response>> getSSMasterV2(@Url String mSSMasterV2);
+    @GET
+    Observable<List<SSMasterV2Response>> getSSMasterV2(@Url String mSSMasterV2);
 //
 //    @GET
 //    Observable<List<ScarpReasonResponse>> getScarpReason(@Url String reasonId);
