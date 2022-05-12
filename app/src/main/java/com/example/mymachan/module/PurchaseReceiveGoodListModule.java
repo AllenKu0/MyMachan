@@ -9,6 +9,7 @@ import com.example.mymachan.ui.receivegood.phurchasereceivegoodlist.PurchaseRece
 import com.example.mymachan.ui.receivegood.phurchasereceivegoodlist.PurchaseReceiveGoodListPresenter;
 import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodSearchPresenter;
 import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodsContract;
+import com.example.mymachan.utils.api.pojo.receivedreceipt.ReceivedReceiptRequest;
 import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodDeliveryRequest;
 import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodRequest;
 import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodResponse;
@@ -63,5 +64,11 @@ public class PurchaseReceiveGoodListModule {
     @Named("BatchList")
     List<ReceiveGoodResponse> provideReceiveGoodResponseBatchList() {
         return new ArrayList<>();
+    }
+
+    @Provides
+    @PurchaseReceiveGoodListScoped
+    ReceivedReceiptRequest provideReceivedReceiptRequest() {
+        return new ReceivedReceiptRequest();
     }
 }

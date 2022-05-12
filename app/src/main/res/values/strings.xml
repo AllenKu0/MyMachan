@@ -19,6 +19,7 @@
     <string name="hint_printing">列印中，請稍候</string>
     <string name="hint_uploading">上傳中，請稍候</string>
 
+    <string name="error_code_network_not_transfer">失敗，已存入未轉收貨</string>
     <string name="error_code_search">找不到符合搜尋的項目</string>
     <string name="receive_good_supplier_item">%1$s %2$s</string>
 
@@ -28,4 +29,6 @@
     <string name="api_request_ssmasterv2_with_condition">/api/SSMasterV2/?$filter=indexof(CU_SMaterialID,\'%1$s\') ne -1 </string>
 
     <string name="hint_zero">0</string>
+
+    <string name="api_method_createreceivingorderbysingle">CreateReceivingOrderBySingleEx</string>
 </resources>

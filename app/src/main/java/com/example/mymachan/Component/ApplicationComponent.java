@@ -6,6 +6,7 @@ import com.example.mymachan.api.MachanAPI;
 import com.example.mymachan.module.APIModule;
 import com.example.mymachan.module.ApplicationModule;
 import com.example.mymachan.rxjava.SchedulerProvider;
+import com.example.mymachan.utils.api.soap.request.RequestEnvelope;
 import com.example.mymachan.utils.api.soap.requestValue.RequestValueProvider;
 import com.example.mymachan.utils.sharepreference.LoginPreferencesProvider;
 
@@ -36,4 +37,8 @@ public interface ApplicationComponent {
     RequestValueProvider getRequestValueProvider();
 
     LoginPreferencesProvider getLoginPreferencesProvider();
+
+    RequestEnvelope provideRequestEnvelope();
+
+
 }

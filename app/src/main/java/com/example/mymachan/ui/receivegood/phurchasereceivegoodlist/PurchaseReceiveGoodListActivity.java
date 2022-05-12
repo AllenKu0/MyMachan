@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -69,7 +70,7 @@ public class PurchaseReceiveGoodListActivity extends BaseActivity
 
     @Override
     public void onSubmitClick() {
-
+        showSelectDialog("是否確定收穫",onAskReceiveDialogClick());
     }
 
     @Override
@@ -81,5 +82,31 @@ public class PurchaseReceiveGoodListActivity extends BaseActivity
     public void onReceiveGoodResponse(List<ReceiveGoodResponse> list) {
         purchaseReceiveGoodListBinding.setCount(String.valueOf(list.size()));
         purchaseReceiveGoodListAdapter.setListData(list);
+    }
+
+    @Override
+    public void onCreateReceiptResponse(List<ReceiveGoodResponse> list, String receipt) {
+        purchaseReceiveGoodListBinding.setCount(String.valueOf(purchaseReceiveGoodListAdapter.getSelectedListData().size()));
+        purchaseReceiveGoodListBinding.setReceived(true);
+        purchaseReceiveGoodListBinding.setReceipt(receipt);
+        purchaseReceiveGoodListAdapter.setListData(list);
+    }
+
+    @Override
+    public DialogInterface.OnClickListener onAskReceiveDialogClick() {
+        return new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if(i==DialogInterface.BUTTON_POSITIVE){
+                    if(purchaseReceiveGoodListAdapter.getSelectedListData().size() == 0){
+                        showToast("查無資料");
+                        return;
+                    }
+                    presenter.CreateReceipt(purchaseReceiveGoodListAdapter.getSelectedSubmitData());
+                }else if(i == DialogInterface.BUTTON_NEGATIVE){
+                    return;
+                }
+            }
+        };
     }
 }

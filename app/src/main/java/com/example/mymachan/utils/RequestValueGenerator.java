@@ -1,5 +1,6 @@
 package com.example.mymachan.utils;
 
+import com.example.mymachan.utils.api.pojo.receivedreceipt.ReceivedReceiptRequest;
 import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodDeliveryRequest;
 import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodRequest;
 
@@ -62,5 +63,9 @@ public class RequestValueGenerator {
                         "A.BillDate < " + CommonUtils.getYear() + "1231");
         //A.BillNo=&apos;1MP1708160096&apos;and A.OrgId=&apos;1000&apos;and A.BillDate &gt;=20170816 and A.BillDate &lt;=20201231
         return deliveryRequest.toString();
+    }
+
+    public static String getReceivedReceiptRequest(ReceivedReceiptRequest receivedReceiptRequest) {
+        return "A.BillNo='" + receivedReceiptRequest.getBillNo() + "'";
     }
 }

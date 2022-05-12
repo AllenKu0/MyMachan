@@ -5,7 +5,9 @@ import android.content.DialogInterface;
 import com.example.mymachan.base.BaseAttacher;
 import com.example.mymachan.base.BaseView;
 import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodSearch;
+import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodResponse;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface PurchaseReceiveGoodsContract {
@@ -47,5 +49,7 @@ public interface PurchaseReceiveGoodsContract {
         void addItem();
 
         void onMoreClick(int position);
+
+
     }
 }

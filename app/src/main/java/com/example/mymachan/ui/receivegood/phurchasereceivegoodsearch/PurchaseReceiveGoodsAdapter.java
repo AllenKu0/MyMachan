@@ -11,6 +11,7 @@ import com.example.mymachan.databinding.ItemPurchaseReceiveGoodBinding;
 import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodSearch;
 import com.example.mymachan.ui.receivegood.phurchasereceivegoodsearch.PurchaseReceiveGoodsContract;
 import com.example.mymachan.utils.ViewHolder;
+import com.example.mymachan.utils.api.pojo.receivegood.ReceiveGoodResponse;
 
 import java.util.List;
 
@@ -53,6 +54,8 @@ public class PurchaseReceiveGoodsAdapter extends RecyclerView.Adapter<ViewHolder
         }
 
     }
+
+
 
 
     @NonNull

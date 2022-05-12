@@ -44,7 +44,7 @@ public class PurchaseReceiveGoodListAdapter extends RecyclerView.Adapter<ViewHol
     }
     @Override
     public void onItemClick(int position) {
-        Log.e("TAG", "onItemClick: kkkkkkkkkk" );
+        Log.e("TAG", "onItemClick: kkkkkkkkkk"+position );
         mDataList.get(position).setChecked(!mDataList.get(position).isChecked());
         notifyDataSetChanged();
     }
@@ -60,7 +60,7 @@ public class PurchaseReceiveGoodListAdapter extends RecyclerView.Adapter<ViewHol
 
     @Override
     public ViewHolder<ItemPurchaseReceiveGoodListBinding> onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(activity);
+        LayoutInflater layoutInflater = LayoutInflater.from(activity); //parent.getContext()
         itemPurchaseReceiveGoodListBinding = ItemPurchaseReceiveGoodListBinding.inflate(layoutInflater,parent,false);
         itemPurchaseReceiveGoodListBinding.setView(this);
         itemPurchaseReceiveGoodListBinding.setActivity(activity);
@@ -76,6 +76,36 @@ public class PurchaseReceiveGoodListAdapter extends RecyclerView.Adapter<ViewHol
         }
         itemPurchaseReceiveGoodListBinding.setData(getPurOrderByBParIdResponse);
         itemPurchaseReceiveGoodListBinding.executePendingBindings();
+    }
+    @Override
+    public List<ReceiveGoodResponse> getSelectedListData() {
+        List<ReceiveGoodResponse> list = new ArrayList<>();
+        for(int i=0,l=mDataList.size();i<l;i++){
+            if(mDataList.get(i).isChecked()){
+                list.add(mDataList.get(i));
+            }
+        }
+        return list;
+    }
+
+    @Override
+    public List<CreateReceivingOrderBySingleRequest> getSelectedSubmitData() {
+        List<CreateReceivingOrderBySingleRequest> list = new ArrayList<>();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        String date = simpleDateFormat.format(new java.util.Date());
+
+        for(int i=0,l=mDataList.size();i<l;i++){
+            if(mDataList.get(i).isChecked()){
+                mSubmitList.get(i).setReceivingSQty(mDataList.get(i).getUnTransSQty());
+                mSubmitList.get(i).setStorage(mDataList.get(i).getStorage());
+                mSubmitList.get(i).setBillDate(date);
+                mSubmitList.get(i).setReciveDate(date);
+                mSubmitList.get(i).setFromOrderBillNo(mDataList.get(i).getBillNo());
+                mSubmitList.get(i).setFromOrderRowId(mDataList.get(i).getRowId());
+                list.add(mSubmitList.get(i));
+            }
+        }
+        return list;
     }
 
     @Override
@@ -97,6 +127,11 @@ public class PurchaseReceiveGoodListAdapter extends RecyclerView.Adapter<ViewHol
         mDataList = list;
 
         notifyDataSetChanged();
+    }
+
+    @Override
+    public void onStorageClick(int position) {
+
     }
 
     @Override

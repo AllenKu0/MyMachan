@@ -150,6 +150,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/purchase_receive_good_list_recyclerview"
+                android:fastScrollEnabled="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
@@ -159,6 +160,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="確認"
+            android:onClick="@{()->view.onSubmitClick()}"
             android:visibility="@{!received ? View.VISIBLE : View.INVISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

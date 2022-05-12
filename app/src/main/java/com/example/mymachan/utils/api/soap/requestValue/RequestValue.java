@@ -8,6 +8,9 @@ public class RequestValue implements RequestValueProvider {
 
     @Inject
     ReceiveGoodRequestValue receiveGoodRequestValue;
+
+    @Inject
+    ReceivedReceiptRequestValue receivedReceiptRequestValue;
     @Inject
     public RequestValue() {
 
@@ -16,5 +19,10 @@ public class RequestValue implements RequestValueProvider {
     @Override
     public ReceiveGoodRequestValue getReceiveGoodRequest() {
         return receiveGoodRequestValue;
+    }
+
+    @Override
+    public ReceivedReceiptRequestValue getReceivedReceiptRequestValue() {
+        return receivedReceiptRequestValue;
     }
 }
